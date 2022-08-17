@@ -1,7 +1,7 @@
 package ru.job4j.oop;
 
 public class Jukebox {
-    public void music (int position) {
+    public void music(int position) {
         String song = "Не найдено";
         if (position == 1) {
             song = "Пусть бугут неуклюже";
