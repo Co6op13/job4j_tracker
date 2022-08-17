@@ -6,8 +6,8 @@ public class Dog {
         Dog sharik = new Dog();
         Dog zhychka = new Dog();
     }
-    
-    public void voice () {
+
+    public void voice() {
         System.out.println("woof-woof");
     }
 
