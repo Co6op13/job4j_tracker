@@ -1,7 +1,5 @@
 package ru.job4j.oop;
 
-import java.lang.reflect.Field;
-
 public class Error {
     private boolean active;
     private int status;
