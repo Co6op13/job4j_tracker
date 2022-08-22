@@ -51,7 +51,7 @@ public class PointTest {
     }
 
     @Test
-    public void whenM1M1to22then4do24() {
+    public void whenM1M1to22then4dot24() {
         double expected = 4.24;
         Point point1 = new Point(-1, -1);
         Point point2 = new Point(2, 2);
@@ -60,7 +60,7 @@ public class PointTest {
     }
 
     @Test
-    public void whenM11toM22then1do41() {
+    public void whenM11toM22then1dot41() {
         double expected = 1.41;
         Point point1 = new Point(-1, 1);
         Point point2 = new Point(-2, 2);
@@ -69,7 +69,7 @@ public class PointTest {
     }
 
     @Test
-    public void when1M1to2M2then1do41() {
+    public void when1M1to2M2then1dot41() {
         double expected = 1.41;
         Point point1 = new Point(1, -1);
         Point point2 = new Point(2, -2);
@@ -78,7 +78,7 @@ public class PointTest {
     }
 
     @Test
-    public void when1001to2002then1do41() {
+    public void when1001to2002then1dot100() {
         double expected = 100;
         Point point1 = new Point(100, 1);
         Point point2 = new Point(200, 2);
