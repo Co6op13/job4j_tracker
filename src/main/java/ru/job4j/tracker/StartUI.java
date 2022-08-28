@@ -3,17 +3,6 @@ package ru.job4j.tracker;
 import java.util.Scanner;
 
 public class StartUI {
-    private static Scanner scanner;
-    private static Tracker tracker;
-
-    private static void itemAdd() {
-        System.out.println("=== Create a new Item ===");
-        System.out.print("Enter name: ");
-        String name = scanner.nextLine();
-        tracker.add(new Item(name));
-        System.out.println("Добавленная заявка: " + name);
-        System.out.println();
-    }
 
     public void init(Scanner scanner, Tracker tracker) {
         boolean run = true;
@@ -22,8 +11,13 @@ public class StartUI {
             System.out.print("Select: ");
             int select = Integer.parseInt(scanner.nextLine());
             if (select == 0) {
-                itemAdd();
-            } else {
+                System.out.println("=== Create a new Item ===");
+                System.out.print("Enter name: ");
+                String name = scanner.nextLine();
+                Item item = new Item(name);
+                tracker.add(item);
+                System.out.println("Добавленная заявка: " + item);
+            } else if (select == 6) {
                 run = false;
             }
         }
@@ -42,8 +36,8 @@ public class StartUI {
     }
 
     public static void main(String[] args) {
-        scanner = new Scanner(System.in);
-        tracker = new Tracker();
+        Scanner scanner = new Scanner(System.in);
+        Tracker tracker = new Tracker();
         new StartUI().init(scanner, tracker);
     }
 }
