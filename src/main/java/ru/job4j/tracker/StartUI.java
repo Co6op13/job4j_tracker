@@ -70,9 +70,6 @@ public class StartUI {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Tracker tracker = new Tracker();
-        tracker.add(new Item("test1"));
-        tracker.add(new Item("test2"));
-        tracker.add(new Item("test31"));
         new StartUI().init(scanner, tracker);
     }
 }
