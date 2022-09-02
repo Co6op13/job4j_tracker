@@ -24,13 +24,13 @@ public class StartUITest {
         Item item = tracker.add(new Item("Edit test "));
         String editName = "New item name";
         Input in = new StubInput(
-                new String[]{"0", Integer.toString(item.getId()), editName , "1"}
+                new String[]{"0", Integer.toString(item.getId()), editName, "1"}
         );
         UserAction[] actions = {
                 new EditAction(),
                 new ExitAction()
         };
-        new StartUI().init(in,tracker,actions);
+        new StartUI().init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()).getName()).isEqualTo(editName);
     }
 
@@ -39,13 +39,13 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Delete test "));
         Input in = new StubInput(
-                new String[]{"0", Integer.toString(item.getId()) , "1"}
+                new String[]{"0", Integer.toString(item.getId()), "1"}
         );
         UserAction[] actions = {
                 new DeleteAction(),
                 new ExitAction()
         };
-        new StartUI().init(in,tracker,actions);
+        new StartUI().init(in, tracker, actions);
         assertThat(tracker.findById(item.getId())).isNull();
     }
 }
